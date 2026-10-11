@@ -97,7 +97,7 @@ return await Deployment.RunAsync(() =>
         new CustomResourceOptions { DependsOn = { allowS3 } }
     );
 
-    // Export the name of the bucket
+    // Export the name of the bucket and function
     return new Dictionary<string, object?>
     {
         ["bucketName"] = bucket.Id,
